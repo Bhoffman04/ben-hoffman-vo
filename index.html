@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Hoffman - Voice Over Artist</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Sets the background to black */
+            color: white; /* Optional: Makes text white for better contrast */
+            margin: 0; /* Removes any default margins for a cleaner layout */
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            animation: fadeIn 2s ease-in;
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #white;
+        }
+        p.subtitle {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #ff0000;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: red;
+            font-size: 1.2rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+        h2 {
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 10px;
+        }
+        footer {
+            position: relative;
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #ffffff;
+            width: 100%;
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #ff0000;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ff0000;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ben Hoffman</h1>
+        <p class="subtitle">
+            Voice Over Artist
+        </p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#demoreels">Demo Reels</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Ben Hoffman is a voiceover talent who has a passion for his craft. He analyzes copy masterfully to provide the performance best suited for your project. His background in professional musical theater allows him to take direction well and turn your copy into a work of art. Whether you require gruff, smooth, young, or mature, he will deliver with the most authentic performance to your satisfaction.
+            </p>
+            <p>
+                Home Studio Equipment: Neumann TLM 103, Apollo Arrow, Pro Tools.
+            </p>
+            <p>
+                Travel Equipment: Audio Technica AT2020, Behringer UMC22, Twisted Wave.
+            </p>
+            <p>
+                Disclaimer: The audio quality of an audition is not indicative of the final product. Lower quality equipment may be used in order to ensure auditions are sent in a punctual manner because your time is valuable.
+            </p>
+        </section>
+
+        <section id="demoreels">
+            <h2>Demo Reels</h2>
+            <p>
+                Ben Hoffman commercial demo reel 2025:
+            </p>
+            <audio controls>
+                <source src="Ben Hoffman Commercial DEMO.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio
+            <p>Ben Hoffman commercial demo reel 2023:</p>
+        <audio controls>
+            <source src="Ben Hoffman Commercial Reel 2023.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+    
+<section id="gallery">
+        <h2>Gallery</h2>
+        <p>Photos of Ben Hoffman:</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <img src="IMG_4361.jpg" alt="" style="width: 30%; border-radius: 5px; cursor: pointer;" onclick="expandImage(this)">
+           <img src="IMG_1258.jpg" alt="" style="width: 30%; border-radius: 5px; cursor: pointer;" onclick="expandImage(this)">
+           <img src="IMG_1575.jpg" alt="" style="width: 30%; border-radius: 5px; cursor: pointer;" onclick="expandImage(this)">
+           <img src="IMG_3731.jpeg" alt="" style="width: 30%; border-radius: 5px; cursor: pointer;" onclick="expandImage(this)">
+           <img src="IMG_7599.jpg" alt="" style="width: 30%; border-radius: 5px; cursor: pointer;" onclick="expandImage(this)">
+           <img src="IMG_7601.jpg" alt="" style="width: 30%; border-radius: 5px; cursor: pointer;" onclick="expandImage(this)">
+        </div>
+        <!-- Modal for Expanded Image -->
+        <div id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center;">
+            <span onclick="closeModal()" style="position: absolute; top: 10px; right: 20px; font-size: 24px; color: white; cursor: pointer;">&times;</span>
+            <img id="expandedImage" style="max-width: 90%; max-height: 90%; border-radius: 5px;">
+<script>
+                function expandImage(img) {
+                    const modal = document.getElementById('imageModal');
+                    const expandedImg = document.getElementById('expandedImage');
+                    modal.style.display = 'flex';
+                    expandedImg.src = img.src;
+                }
+            
+                function closeModal() {
+                    const modal = document.getElementById('imageModal');
+                    modal.style.display = 'none';
+                }
+            </script>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            If you'd like to get in touch, please email: <a href="mailto:bhoffmanvo@gmail.com" style="color: #ff0000;">bhoffmanvo@gmail.com</a>
+        </p>
+<p> Or you can fill out the form below!</p>
+        <form action="https://formsubmit.co/bhoffmanvo@gmail.com" method="POST" style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 10px; margin-top: 20px;">
+            <label for="firstName" style="color: #000;">First Name (required)</label><br>
+            <input type="text" id="firstName" name="firstName" required style="width: 100%; margin-bottom: 10px;"><br>
+            <label for="lastName" style="color: #000;">Last Name</label><br>
+            <input type="text" id="lastName" name="lastName" style="width: 100%; margin-bottom: 10px;"><br>
+            <label for="email" style="color: #000;">Email Address (required)</label><br>
+            <input type="email" id="email" name="email" required style="width: 100%; margin-bottom: 10px;"><br>
+            <label for="subject" style="color: #000;">Subject</label><br>
+            <input type="text" id="subject" name="subject" required style="width: 100%; margin-bottom: 10px;"><br>
+            <label for="message" style="color: #000;">Message (required)</label><br>
+            <textarea id="message" name="message" required style="width: 100%; margin-bottom: 10px;"></textarea><br>
+            <button type="submit" style="background-color: #ff0000; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 5px;">Submit</button>
+        </form>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ben-hoffman-800194349" target="_blank">LinkedIn</a>
+            <a href="https://x.com/bhoffmanvo?s=21" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/bhoffman_vo?igsh=MTA3cXkzbjE3bWk2aQ%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+        </div>
+    </section>
+</div>
+<footer>
+    <p>
+        &copy; 2025 Ben Hoffman
+    </p>
+</footer>
+
+</body>
+</html>
